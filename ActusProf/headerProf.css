@@ -1,0 +1,59 @@
+.nav.nav-pills{
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  box-shadow: 2px 2px 7px #7E7E7E;
+  width: 60%;
+  height: auto;
+  margin-left: 23%;
+  color: #7E7E7E;
+}
+.navitem{
+  font-family:arial;
+    color: #7E7E7E;
+    list-style: none;
+    margin-top: 2%;
+    margin-bottom:2%;
+    margin-left: 15%;
+    border:none;
+}
+.navlink{
+  color: #7E7E7E;
+}
+.navlink:hover{
+  color:#019EE5;
+}
+
+.lg-list{
+  margin-top:15%;
+  padding: 1px;
+  margin-bottom: 69px;
+}
+.ico{
+  margin-right: 5px;
+}
+
+.logout{
+  border:none;
+  font-family: arial;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 2px 2px 7px #7E7E7E;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top:20px;
+  padding-bottom:20px;
+  font-family: arial;
+  color: #7E7E7E;
+  font-size: 15px;
+  margin-left: -80%;
+}
+.logout:hover{
+  background-color: #019EE5;
+  color: #FFFFFF;
+}
+
+
+
+
