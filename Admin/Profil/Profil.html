@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ajouter un contenu</title>
+    <title>Actualité</title>
     <link rel="stylesheet" type="text/css" href="../bootstrap.min.css">
-    <link rel="stylesheet" href="Add.css">
+    <link rel="stylesheet" href="Profil.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
         
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
@@ -44,17 +44,74 @@
             <div class="row">
                 <header class="d-flex justify-content-center py-3"></header>
                 <div class="col-sm-1">
-                <img id="image-logo" src="../ingdata.png">
+                <img id="image-logo" src="../img/ingdata.png">
             </div>
-            <div class="col-sm-10">
+            <div class="col-sm-9">
                 <ul class="nav nav-pills">
                     <li class="navitem nav-item"><a href="../Actualités/index.html" class="navlink nav-link"><i class="ico ri-home-4-fill"></i>Actualité</a></li>
                     <li class="navitem nav-item"><a href="#" class="navlink nav-link"><i class="ico ri-bar-chart-box-fill"></i>Cours</a></li>
                     <li class="navitem nav-item"><a href="#" class="navlink nav-link"><i class="ico ri-calendar-2-line"></i>Emploi du temps</a></li>
                     <li class="navitem nav-item"><a href="#" class="navlink nav-link"><i class="ico ri-article-fill"></i>Notes</a></li>
-                    <li class="navitem nav-item"><a href="#" class="navlink nav-link"><i class='ico bx bx-note'></i>Absence </a></li>
+                    <li class="navitem nav-item"><a href="#" class="navlink nav-link"><i class='ico bx bx-note'></i>Absence</a></li>
                     <li class="navitem nav-item"><a href="#" class="navlink nav-link"><i class="ico ri-account-circle-fill"></i></a></li>
                 </ul>
+            </div>
+            <!--Pop-up étudiant-->
+    <div id="popupForm" class="form-popup">
+        <div class="form-container">
+            <h2>Formulaire d'inscription</h2>
+            <form>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label for="nom">Nom:</label>
+                        <input type="text" id="nom" name="nom" required>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="prenom">Prénom:</label>
+                <input type="text" id="prenom" name="prenom" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label for="filiere">Filière:</label>
+                        <input type="text" id="filiere" name="filiere" required>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="annee">Année Académique:</label>
+                <select id="annee" name="annee" required>
+                    <option value="">Sélectionner une année</option>
+                    <option value="2023-2024">L1</option>
+                    <option value="2024-2025">L2</option>
+                    <option value="2025-2026">L3</option>
+                    <option value="2025-2026">M1</option>
+                    <option value="2025-2026">M2</option>
+                </select>
+                    </div>
+                </div>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Mot de passe:</label>
+                <input type="password" id="password" name="password" required>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <button type="submit" id="envoyer" class="cancel-btn">Envoyer</button>
+                    </div>
+                    <div class="col-sm-6">
+                        <button type="button" id="closeFormBtn" class="cancel-btn">Fermer</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+            <div class="col-sm-1">
+                <a href="#" class="addEtudiantlink" id="openFormBtn">
+                <div class="addEtudiant">
+                    <i class="ri-user-add-fill"></i>
+                </div>
+            </a>
             </div>
             <div class="col-sm-1">
                 <div class="lg-list">
@@ -62,32 +119,34 @@
                     </div>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-sm-1"></div>
                 <div class="col-sm-10">
-                    <div class="edit">
-                        <h2 class="save"><a href="../Actualités/index.html" class="savea">Enregistrer</a></h2>
-                        <input type="text" placeholder="Créer votre publication. . ." class="textarea">
-                        <div class="fonction">
-                            <div class="imgvd">
+                    <div class="row">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-10">
+                            <div class="profil">
+                                <i class="profilaccount ri-account-circle-fill"></i>
                                 <label for="images">
-                                    <span>Choisir une image</span>
+                                    <span>Modifier la photo de profil</span>
                                     <input type="file" id="images" />
-                                  </label>                                  
-                            </a>
+                                  </label>
+                                  <div class="nomProfil">
+                                    <strong>Nom :</strong> Admin
+                                    <br><br>
+                                    <strong>Fonction :</strong> Administrer
+                                  </div>
                             </div>
-                            <div class="supp">
-                                <a href="#" class="supplink">
-                                    <i class="supp ri-delete-bin-5-fill"></i>
-                                </a>
-                                </div>
                         </div>
-                        <div class="btndiv"><a href="../Actualités/index.html" class="annuler">Annuler</a></div>
+                        <div class="col-sm-1"></div>
                     </div>
                 </div>
                 <div class="col-sm-1"></div>
-        </div>
-        </div>
+            </div>
+            
+
+        <script src="Profil.js"></script>
 </body>
 
 </html>
