@@ -146,7 +146,16 @@
             </div>
             
 
-        <script src="Profil.js"></script>
+        <script>
+            document.getElementById("openFormBtn").addEventListener("click", function() {
+    document.getElementById("popupForm").style.display = "flex";
+});
+
+document.getElementById("closeFormBtn").addEventListener("click", function() {
+    document.getElementById("popupForm").style.display = "none";
+});
+
+        </script>
 </body>
 
 </html>
